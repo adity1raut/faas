@@ -44,6 +44,4 @@ services:
     network_mode: host
     depends_on:
       - faas
-    volumes:
-      - ./test/:/metacall/
-    command: /metacall/test.sh
+    command: npx mocha --timeout 120000 dist/test/integration.test.js
