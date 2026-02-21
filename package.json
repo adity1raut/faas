@@ -7,7 +7,7 @@
 		"metacall-faas": "dist/index.js"
 	},
 	"scripts": {
-		"test": "npm run buildDebug && mocha dist/test",
+		"test": "npm run buildDebug && mocha dist/test --ignore dist/test/integration.test.js",
 		"integration": "npm run buildDebug && mocha --timeout 120000 dist/test/integration.test.js",
 		"prepublishOnly": "npm run build",
 		"buildDebug": "npm run format && npm run fix && tsc --sourceMap true",
